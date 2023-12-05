@@ -9,10 +9,10 @@ public class Main {
         List<CustomerOrder> orders = new ArrayList<>();
 
         //Discount types S for Sale, D for Discount, L for Liquidation
-        orders.add(new CustomerOrder("William Walters", 75.34, 'D'));
-        orders.add(new CustomerOrder("Susan Smothers", 24.12, 's'));
-        orders.add(new CustomerOrder("Jessica Johnson", 273.93, 'L'));
-        orders.add(new CustomerOrder("Richard Ricardo", 171.42, 'D'));
+        orders.add(new CustomerOrder("William Walters", 75.34, new DDiscount()));
+        orders.add(new CustomerOrder("Susan Smothers", 24.12, new LDiscount()));
+        orders.add(new CustomerOrder("Jessica Johnson", 273.93, new SDiscount()));
+        orders.add(new CustomerOrder("Richard Ricardo", 171.42, new DDiscount()));
 
         double total = 0;
         for (CustomerOrder order : orders) {
